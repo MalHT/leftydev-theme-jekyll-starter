@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  
+<head>
+  <title>{% if page.title %}{{ page.title | append:' - ' | append:site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+  
+  <link href="{{ site.url }}/assets/css/main.css" rel="stylesheet" />
+  
+  <meta charset="utf-8" />
+  
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description | markdownify | strip_html }}{% endif %}" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+<!--
+  <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml" title="Sitewide ATOM Feed" />
+  
+  <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/rss.xml" title="Sitewide RSS Feed" />
+-->
+  
+</head>
+  
+<body>
+  
+  <div class="page-container">
+  
+    <img id="background-logo" src="{{ site.url }}/images/logo.svg" />
+    
+    <div class="page-sidebar-left">
+     
+      <div class="page-sidebar-left-content">
+      
+        <div class="sidebar-logo-area">
+
+          <img class="sidebar-logo" src="{{ site.url }}/images/logo.svg" alt="LeftyDev Logo" />
+
+          <h1 class="sidebar-logo-heading"><a href="{{ site.url }}">{{ site.title }}</a></h1>
+
+        </div>
+
+        <p>{{ site.description }}</p>
+
+        <br />
+
+        <a href="{{ site.discord_invite }}" class="button-green">Open in Discord</a>
+        
+        <ul class="sidebar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Infrastructure</a></li>
+          <li><a href="#">Code of Conduct</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      
+      </div>  
+        
+    </div>
+    
+    <div class="page-main">
+      
+      <div class="page-main-content">
+      
+        {{ content }}
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  
+</body>
+  
+</html>

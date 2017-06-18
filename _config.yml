@@ -1,0 +1,14 @@
+title: LeftyDev
+description: >
+  A small community of SJW-adjacent technology enthusiasts and gamers.
+copyright: Untitled
+sass:
+  sass_dir: assets/sass
+url: http://localhost:4000
+
+discord_invite: "#"
+show_weird_background: false
+
+gems: [jekyll-paginate]
+paginate_path: "/page/:num/"
+paginate: 5
